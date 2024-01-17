@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body {
+            height:100vh;
+            margin: 0;
+            background-color: black;
+        }
+        .bloco1 {
+            background-color: #1f2937;
+            color: yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 36px;
+            text-align: center;
+        }
+        .bloco2{
+            background-color: #1f2937;
+            color: yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .bloco{
+            background-color: #1f2937;
+            color: yellow;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            background-color: #1f2937;
+            color: yellow;
+            padding: 10px 20px;
+            border: 1px solid yellow;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        h1{
+            color: yellow;
+            font-size: 24px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Pedra,papel e tesoura</title>
+</head>
+<body>
+    <div class="bloco1">Pedra-Papel-Tesoura</div>
+    <div class="bloco2">
+        <h1>Jogue com o computador, qual jogada irá fazer?</h1>
+    </div>
+    <div class="bloco">
+            <button id="papel">Papel</button>
+            <button id="pedra">Pedra</button>
+            <button id="tesoura">Tesoura</button>
+    </div>
+    <script>
+
+        const papel = document.getElementById('papel');
+        papel.addEventListener('click', () => {
+            const container = document.querySelector(".bloco");
+            container.innerHTML = "<h1>Você escolheu papel</h1>";
+
+        });
+        const tesoura = document.getElementById('tesoura');
+        tesoura.addEventListener('click', () => {
+            const container = document.querySelector(".bloco");
+            container.innerHTML = "<h1>Você escolheu tesoura</h1>";
+        });
+        const pedra = document.getElementById('pedra');
+        pedra.addEventListener('click', () => {
+            const container = document.querySelector(".bloco");
+            container.innerHTML = "<h1>Você escolheu pedra</h1>";
+
+        });
+
+    </script>
+</body>
+</html>
